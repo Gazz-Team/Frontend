@@ -10,12 +10,12 @@ export default function Home( {navigation} ) {
                 Hello Home
             </Text>
             <Button
-            title="Transfer"
-            onPress={() => navigation.navigate("Transfer")}
+            title="ExploreCustom"
+            onPress={() => navigation.navigate("ExploreCustom")}
             />
             <Button
-                title="Settings"
-                onPress={() => navigation.navigate("Settings")}
+                title="ExploreDefault"
+                onPress={() => navigation.navigate("ExploreDefault")}
             />
         </View>
     )

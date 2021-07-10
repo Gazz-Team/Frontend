@@ -4,8 +4,8 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack';
 
 import {SignIn, SignUp, Splash} from './screens/Auth'
-import Transfer from './screens/Transfer'
-import Settings from './screens/Settings'
+import ExploreDefault from './screens/ExploreDefault'
+import ExploreCustom from './screens/ExploreCustom'
 
 import Home from './screens/Home'
 import { AuthContext } from "./context";
@@ -29,8 +29,8 @@ const HomeStackScreen = () => {
   return(
     <HomeStack.Navigator>
         <HomeStack.Screen name='Home' component={Home}/>
-        <HomeStack.Screen name='Transfer' component={Transfer}/>
-        <HomeStack.Screen name='Settings' component={Settings}/>
+        <HomeStack.Screen name='ExploreDefault' component={ExploreDefault}/>
+        <HomeStack.Screen name='ExploreCustom' component={ExploreCustom}/>
     </HomeStack.Navigator>
   )
 }

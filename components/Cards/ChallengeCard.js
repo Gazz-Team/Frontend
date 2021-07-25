@@ -28,20 +28,29 @@ const styles = StyleSheet.create({
   });
 
 
-const HomeProfile = () => (
 
+const ChallengeCard = ({title, desc, creator}) => {
+    return (
         <Card style={styles.cardContainer}>
             <View style={styles.profileTitle}>
                 <Avatar.Image size={35} source={require('../../assets/favicon.png')} />
-                <Card.Title title="Angel C. Powell" subtitle="Marketing Manager and Analytics" style={{color:'white'}} titleStyle={{color:'white'}} subtitleStyle={{color:'white'}}/>
+                <Card.Title title={title} subtitle={creator} titleStyle={{color:'white'}} subtitleStyle={{color:'white'}}/>
             </View>
 
             <Card.Content>
-                <Paragraph style={{color:'white'}}>I Enjoy Intramural Basketball and Doing Daily Training for the Chicago Marathon.</Paragraph>
+                <Paragraph style={{color:'white'}}>{desc}</Paragraph>
             </Card.Content>
 
+            <Card.Actions>
+                <Button 
+                color='white'
+                // style={{color:'white'}}
+                onPress={()=>console.log('euy')}
+                >Take Challenge</Button>
+            </Card.Actions>
+
         </Card>
+    );
+}
 
-);
-
-export default HomeProfile;
+export default ChallengeCard;

@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import HomeStackScreen from '../screens/Home/Home'
+import {HomeStackScreen} from './StackNavigator'
+
 import Explore from '../screens/Explore/Explore';
 import Create from '../screens/Create/Create';
 import Teams from '../screens/Teams/Teams';

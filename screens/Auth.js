@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { AuthContext } from "../context";
-import { TextInput, Appbar, Button, Text } from 'react-native-paper';
+import { TextInput, Button, Text } from 'react-native-paper';
 
 
 const styles = StyleSheet.create({

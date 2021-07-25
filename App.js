@@ -1,11 +1,9 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import {SignIn, SignUp, Splash} from './screens/Auth';
+import {Splash} from './screens/Auth';
 import { AuthContext } from "./context";
+import { RootStackScreen } from './navigation/StackNavigator';
 
-import Home from './screens/Home/Home';
-import BottomTabs from './navigation/BottomTabs'
 
 const MyTheme = {
   dark: false,
@@ -19,41 +17,6 @@ const MyTheme = {
   },
 };
 
-
-const RootStack = createStackNavigator();
-const AuthStack = createStackNavigator();
-
-const AuthStackScreen = () => {
-  return(
-    <AuthStack.Navigator>
-      <AuthStack.Screen name='SignIn' component = {SignIn}/>
-      <AuthStack.Screen name='SignUp' component = {SignUp}/>
-      <AuthStack.Screen name='Home' component = {Home}/>
-    </AuthStack.Navigator>
-  )
-}
-
-const RootStackScreen = ({ userToken }) => (
-  <RootStack.Navigator headerMode="none">
-    {userToken ? (
-      <RootStack.Screen
-        name="App"
-        component={BottomTabs}
-        options={{
-          animationEnabled: true
-        }}
-      />
-    ) : (
-      <RootStack.Screen
-        name="Auth"
-        component={AuthStackScreen}
-        options={{
-          animationEnabled: true
-        }}
-      />
-    )}
-  </RootStack.Navigator>
-);
 
 const App = () => {
   const [isLoading, setIsLoading] = React.useState(true);

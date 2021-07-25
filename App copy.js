@@ -1,27 +1,19 @@
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack';
-import {SignIn, SignUp, Splash} from './screens/Auth';
+
+import {SignIn, SignUp, Splash} from './screens/Auth'
+import ExploreDefault from './screens/ExploreDefault'
+import ExploreCustom from './screens/ExploreCustom'
+
+import Home from './screens/Home'
 import { AuthContext } from "./context";
-
-import Home from './screens/Home/Home';
-import BottomTabs from './navigation/BottomTabs'
-
-const MyTheme = {
-  dark: false,
-  colors: {
-    primary: '#353FDF',
-    background: 'white',
-    card: '#353FDF',
-    text: 'white',
-    border: 'rgb(199, 199, 204)',
-    notification: 'rgb(255, 69, 58)',
-  },
-};
-
 
 const RootStack = createStackNavigator();
 const AuthStack = createStackNavigator();
+const HomeStack = createStackNavigator();
+
 
 const AuthStackScreen = () => {
   return(
@@ -33,12 +25,22 @@ const AuthStackScreen = () => {
   )
 }
 
+const HomeStackScreen = () => {
+  return(
+    <HomeStack.Navigator>
+        <HomeStack.Screen name='Home' component={Home}/>
+        <HomeStack.Screen name='ExploreDefault' component={ExploreDefault}/>
+        <HomeStack.Screen name='ExploreCustom' component={ExploreCustom}/>
+    </HomeStack.Navigator>
+  )
+}
+
 const RootStackScreen = ({ userToken }) => (
   <RootStack.Navigator headerMode="none">
     {userToken ? (
       <RootStack.Screen
         name="App"
-        component={BottomTabs}
+        component={HomeStackScreen}
         options={{
           animationEnabled: true
         }}
@@ -88,7 +90,7 @@ const App = () => {
 
   return (
     <AuthContext.Provider value={authContext}>
-      <NavigationContainer theme={MyTheme}>
+      <NavigationContainer>
         <RootStackScreen userToken={userToken} />
       </NavigationContainer>
     </AuthContext.Provider>

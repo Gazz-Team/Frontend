@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: '10px',
         paddingVertical:'5px',
         margin: '5px',
-        maxWidth:'90vw',
+        width:'90vw',
         height:'auto',
         borderRadius:'10px',
         elevatoion: 5,

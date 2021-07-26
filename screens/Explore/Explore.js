@@ -19,7 +19,7 @@ const Explore = () => {
             style={{margin:'10px'}}
             />
 
-            <View style={{flex:1}}>
+            <View style={{flex:1}} >
                 <ExploreTabScreen />
             </View>
         </View>

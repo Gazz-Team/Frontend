@@ -1,10 +1,11 @@
 import React from 'react';
+import {View, Text} from 'react-native'
 
 const Teams = () => {
     return (
-        <div>
-            <h1>Hello from Teams</h1>
-        </div>
+        <View style={{ flex:1, alignItems:'center', justifyContent:'center', marginVertical:'15px'}}>
+            <Text>Hello from Teams</Text>
+        </View>
     );
 }
 

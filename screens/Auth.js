@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import { AuthContext } from "../context";
 import { TextInput, Button, Text } from 'react-native-paper';
 
@@ -126,7 +126,15 @@ export const SignUp = () => {
 };
 
 export const Splash = () => (
-    <ScreenContainer>
-      <Text>Please wait a while...</Text>
-    </ScreenContainer>
+    <View style={{ flex:1, alignItems:'center', justifyContent:'center'}}>
+        {/* <Image 
+            source={require('../assets/logo/logo.png')}
+            // resizeMode='contain'
+            // style={{
+            //     width:50,
+            //     height:50,
+            // }}
+        /> */}
+        <Text>Loading EduChallenge ...</Text>
+    </View>
   );

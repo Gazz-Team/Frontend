@@ -1,10 +1,12 @@
-import React from 'react'
-import { Text } from 'react-native';
+import React from 'react';
+import {View, Text} from 'react-native'
 
-export default function Settings() {
+const Settings = () => {
     return (
-        <Text>
-            Hello Settings
-        </Text>
-    )
+        <View style={{ flex:1, alignItems:'center', justifyContent:'center', marginVertical:'15px'}}>
+            <Text>Hello from Settings</Text>
+        </View>
+    );
 }
+
+export default Settings;

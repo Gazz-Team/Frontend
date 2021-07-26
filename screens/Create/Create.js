@@ -1,10 +1,11 @@
 import React from 'react';
+import {View, Text} from 'react-native'
 
 const Create = () => {
     return (
-        <div>
-            <h1>Hello from Create</h1>
-        </div>
+        <View style={{ flex:1, alignItems:'center', justifyContent:'center', marginVertical:'15px'}}>
+            <Text>Hello from Create</Text>
+        </View>
     );
 }
 

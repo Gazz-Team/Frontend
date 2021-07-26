@@ -1,13 +1,12 @@
 import * as React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import { View, Button, Text, Paragraph, Avatar, Card, StyleSheet, ScrollView, FlatList} from 'react-native';
-import { TextInput, IconButton, Title, } from 'react-native-paper';
+import { View, StyleSheet, ScrollView, 
+        SafeAreaView,} from 'react-native';
+import { Title, IconButton } from 'react-native-paper';
 
 import HomeProfile from '../../components/Home/HomeProfile'
-import RecentChallenge from '../../components/Home/RecentChallenge'
 
-import challengeData from '../../data/challenge'
-import ChallengeCard from '../../components/Cards/ChallengeCard'
+import RecentChallenge from '../../components/Home/RecentChallenge'
+import RecentTeam from '../../components/Home/RecentTeam'
 
 const styles = StyleSheet.create({
     container:{
@@ -20,21 +19,22 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-between',
         alignItems:'center',
-        padding:'15px'
+        padding:'15px',
     },
     title:{
-        // alignSelf:'left',
         padding:'15px',
     }
 });
 
 export default function Home( {navigation} ) {
     return (
-        <View >
-            {/* <ScrollView> */}
+        <SafeAreaView style={{flex:1}}>
+        <View 
+        style={{flex:1}}
+        >
             <View style={styles.appbar}>
                 <Title>
-                    Home
+                    Hello World
                 </Title>
               <IconButton
                     icon="menu"
@@ -45,34 +45,35 @@ export default function Home( {navigation} ) {
             </View>
 
         
-            <View style={styles.container}>
-                <HomeProfile />
-            </View>
+            <ScrollView
+                scrollEventThrottle={16}
+            >
+                <View style={styles.container}>
+                    <HomeProfile />
+                </View>
 
-            <Title style={styles.title}>
-                Recent Challenge
-            </Title>
+                <Title style={styles.title}>
+                    Recent Challenge
+                </Title>
 
-            <View style={styles.container}>
-                <RecentChallenge />
-                {/* {
-                challengeData.map((data)=>{
-                    return(
-                        <ChallengeCard title={data.title} desc={data.desc} creator={data.creator}/>
-                    )
-                })
-                } */}
-            </View>
+                <View style={styles.container}>
+                    <RecentChallenge />
+                </View>
 
-            {/* <FlatList
-                data={challengeData}
-                renderItem={({data})=>(
-                    <ChallengeCard title={data.title} desc={data.desc} creator={data.creator} />
-                )}
-            /> */}
+                <Title style={styles.title}>
+                    Recent Teams
+                </Title>
 
-        {/* </ScrollView> */}
+                <ScrollView horizontal={true}>
+                    <View style={styles.container}>
+                        <RecentTeam />
+                    </View>
+                </ScrollView>
+
+
+            </ScrollView>
 
         </View>
+        </SafeAreaView>
     )
 }

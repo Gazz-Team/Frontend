@@ -121,10 +121,6 @@ export const SignUp = () => {
             Sign Up
         </Button>
 
-
-            {/* <Button mode="text" color="#353FDF"  >
-                Sign Up for free
-            </Button> */}
         </ScreenContainer>
     );
 };

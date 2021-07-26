@@ -7,7 +7,8 @@ const styles = StyleSheet.create({
         backgroundColor:'#353FDF',
         display: 'flex',
         alignItems:'left',
-        padding: '10px',
+        paddingHorizontal: '10px',
+        paddingVertical:'5px',
         margin: '5px',
         maxWidth:'90vw',
         height:'auto',
@@ -34,20 +35,20 @@ const ChallengeCard = ({title, desc, creator}) => {
         <Card style={styles.cardContainer}>
             <View style={styles.profileTitle}>
                 <Avatar.Image size={35} source={require('../../assets/favicon.png')} />
-                <Card.Title title={title} subtitle={creator} titleStyle={{color:'white'}} subtitleStyle={{color:'white'}}/>
+                <Card.Title title={title} subtitle={creator} titleStyle={{color:'white', fontSize:'15px'}} subtitleStyle={{color:'white', fontSize:'10px'}} />
             </View>
 
             <Card.Content>
-                <Paragraph style={{color:'white'}}>{desc}</Paragraph>
+                <Paragraph style={{color:'white', fontSize:'12px'}}>{desc}</Paragraph>
             </Card.Content>
 
-            <Card.Actions>
+            {/* <Card.Actions>
                 <Button 
                 color='white'
                 // style={{color:'white'}}
                 onPress={()=>console.log('euy')}
                 >Take Challenge</Button>
-            </Card.Actions>
+            </Card.Actions> */}
 
         </Card>
     );

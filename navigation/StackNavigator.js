@@ -1,14 +1,13 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import {SignIn, SignUp} from '../screens/Auth';
-import BottomTabs from './BottomTabs';
+import TabNavigator from './TabNavigator';
 
 import Home from '../screens/Home/Home';
 import Settings from '../screens/Settings/Settings'
 
 const RootStack = createStackNavigator();
 const AuthStack = createStackNavigator();
-
 const HomeStack = createStackNavigator();
 
 
@@ -35,7 +34,7 @@ export const RootStackScreen = ({ userToken }) => (
       {userToken ? (
         <RootStack.Screen
           name="App"
-          component={BottomTabs}
+          component={TabNavigator}
           options={{
             animationEnabled: true
           }}

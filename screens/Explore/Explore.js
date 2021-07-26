@@ -1,11 +1,28 @@
-import React from 'react';
-import {StyleSheet} from 'react-native'
+import * as React from 'react';
+import { Searchbar } from 'react-native-paper';
+import {StyleSheet, ScrollView, View} from 'react-native';
+import {ExploreTabScreen} from '../../navigation/MaterialTopBarNavigator';
+
 
 const Explore = () => {
+    const [searchQuery, setSearchQuery] = React.useState('');
+
+    const onChangeSearch = query => setSearchQuery(query);
     return (
-        <div>
-            <h1>Helo from Explore</h1>
-        </div>
+        <View 
+        style={{flex:1}}
+        >
+            <Searchbar
+            placeholder="Search"
+            onChangeText={onChangeSearch}
+            value={searchQuery}
+            style={{margin:'10px'}}
+            />
+
+            <View style={{flex:1}}>
+                <ExploreTabScreen />
+            </View>
+        </View>
     );
 }
 

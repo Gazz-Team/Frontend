@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
     container:{
         flex:1,
         flexDirection:'row',
-        paddingHorizontal:'20px',
-        paddingBottom:'30px',
+        paddingHorizontal:20,
+        paddingBottom:30,
     }
 })
 

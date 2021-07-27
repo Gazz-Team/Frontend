@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "rapyd",
-    "slug": "rapyd",
+    "name": "EduChallenge",
+    "slug": "EduChallenge",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

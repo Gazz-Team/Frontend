@@ -10,19 +10,19 @@ import RecentTeam from '../../components/Home/RecentTeam'
 
 const styles = StyleSheet.create({
     container:{
-        backgroundcolor: 'blue',
+        backgroundColor: 'blue',
         display:'flex',
         alignItems:'center',
     },
     appbar:{
-        disply:'flex',
+        display:'flex',
         flexDirection:'row',
         justifyContent:'space-between',
         alignItems:'center',
-        padding:'15px',
+        padding:15,
     },
     title:{
-        padding:'15px',
+        padding:15,
     }
 });
 

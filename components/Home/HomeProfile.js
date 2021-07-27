@@ -6,13 +6,13 @@ const styles = StyleSheet.create({
     cardContainer: {
         backgroundColor:'#353FDF',
         display: 'flex',
-        alignItems:'left',
-        padding: '10px',
-        margin: '5px',
-        maxWidth:'90vw',
+        alignItems:'flex-start',
+        padding: 10,
+        margin: 5,
+        maxWidth:90,
         height:'auto',
-        borderRadius:'10px',
-        elevatoion: 5,
+        borderRadius:10,
+        elevation: 5,
         shadowColor: '#000',
         shadowOffset: {width: 0, height: 0},
         shadowOpacity: 0.4,
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         display:'flex',
         flexDirection:'row',
         alignItems:'center',
-        paddingLeft:'16px',
+        paddingLeft:16,
     }
   });
 

@@ -16,7 +16,7 @@ const Explore = () => {
             placeholder="Search"
             onChangeText={onChangeSearch}
             value={searchQuery}
-            style={{margin:'10px'}}
+            style={{margin:10}}
             />
 
             <View style={{flex:1}} >

@@ -8,23 +8,23 @@ const styles = StyleSheet.create({
     container: {
       justifyContent: "center",
       alignItems: "center",
-      marginTop:'80px',
+      marginTop:80,
     },
 
     textForm:{
         color:'#353FDF',
-        margin:'4px'
+        margin:4
     },
 
     inputSignin:{
         display:'flex',
-        alignItems:'left',
+        alignItems:'flex-start',
     },
 
     form:{
-        height:'40px',
-        width:'80vw',
-        margin:'4px'
+        height:40,
+        width:80,
+        margin:4
     }
 
   });
@@ -117,7 +117,7 @@ export const SignUp = () => {
 
         </View>
 
-        <Button mode="contained" color="#353FDF" onPress={() => signUp()} style={{marginTop:'20px', marginBottom:'10px'}}>
+        <Button mode="contained" color="#353FDF" onPress={() => signUp()} style={{marginTop:20, marginBottom:10}}>
             Sign Up
         </Button>
 

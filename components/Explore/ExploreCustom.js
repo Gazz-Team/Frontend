@@ -6,7 +6,7 @@ import ChallengeCard from '../Cards/ChallengeCard'
 const ExploreCustom = () => {
     return (
         <ScrollView >
-            <View style={{alignItems:'center', justifyContent:'center', marginVertical:'15px'}}>
+            <View style={{alignItems:'center', justifyContent:'center', marginVertical:15}}>
 
 
             {

@@ -19,7 +19,7 @@ const TabNavigator = () => (
                 backgroundColor: 'white',
                 height:90,
                 borderRadius:20,
-                boxShadow:'10px 10px black solid'
+                boxShadow:'10 10 black solid'
             }
         }}
 
@@ -35,7 +35,7 @@ const TabNavigator = () => (
                             width:25,
                             height:25,
                             tintColor: focused ? "#353FDF" : "black",
-                            boxshadow: focused? "20px solid black" : 'none',
+                            boxshadow: focused? "20 solid black" : 'none',
                         }}
                     />
                     <Text>Home</Text>
@@ -54,7 +54,7 @@ const TabNavigator = () => (
                             width:25,
                             height:25,
                             tintColor: focused ? "#353FDF" : "black",
-                            boxshadow: focused? "20px solid black" : 'none',
+                            boxshadow: focused? "20 solid black" : 'none',
                         }}
                     />
                     <Text>Explore</Text>
@@ -73,7 +73,7 @@ const TabNavigator = () => (
                             width:25,
                             height:25,
                             tintColor: focused ? "#353FDF" : "black",
-                            boxshadow: focused? "20px solid black" : 'none',
+                            boxshadow: focused? "20 solid black" : 'none',
                         }}
                     />
                     <Text>Create</Text>
@@ -92,7 +92,7 @@ const TabNavigator = () => (
                             width:25,
                             height:25,
                             tintColor: focused ? "#353FDF" : "black",
-                            boxshadow: focused? "20px solid black" : 'none',
+                            boxshadow: focused? "20 solid black" : 'none',
                         }}
                     />
                     <Text>Teams</Text>

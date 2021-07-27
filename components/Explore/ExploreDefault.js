@@ -21,7 +21,7 @@ import ChallengeCard from '../Cards/ChallengeCard'
 const ExploreDefault = () => {
     return (
         <ScrollView >
-            <View style={{alignItems:'center', justifyContent:'center', marginVertical:'15px'}}>
+            <View style={{alignItems:'center', justifyContent:'center', marginVertical:15}}>
 
 
             {
